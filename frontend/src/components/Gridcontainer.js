@@ -16,6 +16,8 @@ const Gridcontainer = ({movies, isLoading}) => {
       const res = await fetch(`http://localhost:5000/api/movies/${supprimer}` , {method:'DELETE'});
       const data = await res.json();
       console.log(data);
+      //temporary solution refresh the page after deleting an elemnt from the movie list
+      window.location.reload();
     } catch (error) {
       console.log(error.message);
     }
@@ -53,7 +55,10 @@ const deleteCard = (e) =>{
      </div>
    
       })}
-      
+
+      <button id="fetch">Previous</button>  
+      <button id="fetch">Next</button> 
+     
     </div>
   )
 }

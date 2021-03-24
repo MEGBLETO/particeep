@@ -125,6 +125,14 @@
 
 
 
+#fetch{
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px;
+}
+
 
 @media screen and (max-width: 1100px){
   .showcase-containt{

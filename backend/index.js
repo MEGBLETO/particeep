@@ -18,7 +18,7 @@ app.use(express.json());
 
 /*************************** */
 /*Here is my route to fetch all movies */
-app.get('/api/movies', (req, res) =>{
+app.get('/api/movies/', (req, res) =>{
 try {
 
    movies$.then((moviess) =>{
@@ -59,11 +59,16 @@ app.delete('/api/movies/:id' , async(req, res) =>{
 try {
   const movieId = req.params.id;
   
+  let movieArray = [];
   movies$.then((moviess) =>{
-    let movieArray = moviess;
-    const data = moviess.filter(movie => movie.id !== movieId);
-     const array = data;
-    res.json(array);
+    for(var i = moviess.length -1; i>=0; i--){
+      if(moviess[i].id == movieId){
+        moviess.splice(i, 1);
+        res.send(moviess)
+      }
+    }
+    movieArray.push(data);
+    res.json(movieArray);
   })
      
 
