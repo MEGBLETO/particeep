@@ -37,6 +37,17 @@ const deleteCard = (e) =>{
 
 
 
+/*fonction pour incrementer les likes */
+const handleLike =() =>{
+
+}
+
+
+/*fonction pour decrementer les likes */
+const handleDislike =() =>{
+  
+}
+
 
   return isLoading ? (<Spinner/>): (
     <div className="showcase-containt">
@@ -47,8 +58,8 @@ const deleteCard = (e) =>{
           <p id="category">Category: {movie.category}</p>
           </div>
         <div className="ratio">
-        <h3 id="like"><BiLike id ="icons"/> {movie.likes}</h3>
-       <h3 id="dislike"><BiDislike id="icons"/> {movie.dislikes}</h3>
+        <h3 id="like"><BiLike id ="icons" onClick={handleLike()}/> {movie.likes}</h3>
+       <h3 id="dislike"><BiDislike id="icons" onClick={handleDislike}/> {movie.dislikes}</h3>
         </div>
         <div className="ratio">
         <Circle percent={movie.likes} trailWidth="1" className="stroke"  strokeWidth="4" strokeColor="green" />

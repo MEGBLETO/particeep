@@ -18,7 +18,7 @@ app.use(express.json());
 
 /*************************** */
 /*Here is my route to fetch all movies */
-app.get('/api/movies/', (req, res) =>{
+app.get('/api/movies', (req, res) =>{
 try {
 
    movies$.then((moviess) =>{

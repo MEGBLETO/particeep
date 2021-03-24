@@ -3,6 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore} from 'redux';
+import allReducer from './reducers/allreducers';
+import { }  from 'react-redux';
+
+
+//STORE 
+const store = createStore(allReducer,
+  
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+
+store.subscribe(() =>console.log(store.getState()));
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
