@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import Spinner from './Spinner'
 import { BiLike, BiDislike} from 'react-icons/bi';
+import { Line, Circle } from 'rc-progress';
 
 
 
@@ -49,6 +50,11 @@ const deleteCard = (e) =>{
         <h3 id="like"><BiLike id ="icons"/> {movie.likes}</h3>
        <h3 id="dislike"><BiDislike id="icons"/> {movie.dislikes}</h3>
         </div>
+        <div className="ratio">
+        <Circle percent={movie.likes} trailWidth="1" className="stroke"  strokeWidth="4" strokeColor="green" />
+        <Circle percent={movie.dislikes} trailWidth="1" className="stroke"  strokeWidth="4" strokeColor="maroon" />
+        </div>
+
 
         <button onClick={deleteCard} id={movie.id} className="delete">Delete</button>
        
