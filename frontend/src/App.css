@@ -32,6 +32,10 @@ body{
   font-family: 'Pacifico', cursive;
 }
 
+#movie-select{
+  cursor: pointer;
+  padding: 5px;
+}
 
 
 .showcase{
@@ -123,6 +127,7 @@ body{
   
 }
 
+
 .delete:hover{
   background-color: maroon;
   transform: scale(1.2);
@@ -130,10 +135,40 @@ body{
 
 .movement{
   padding: 10px;
-  height: 10vh;
+  height: 15vh;
   width: 100%;
-  display: flex;
 }
+
+.pagination{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.pagination{
+  list-style: none;
+}
+
+
+.pagination li a{
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 10px;
+  transition: .2s ease-in-out;
+}
+
+.pagination li a:hover{
+background-color: maroon;
+}
+
+/*Label de bas de page*/
+
+#label{
+  padding: 5px;
+  font-weight: bold;
+}
+ 
 
 
 #fetch{
@@ -150,6 +185,10 @@ body{
   font-weight: bold;
 }
 
+/*navbar label*/
+#navlabel{
+  padding: 6px;
+}
 
 
 @media screen and (max-width: 1100px){
@@ -162,6 +201,17 @@ body{
 
 
 @media screen and (max-width: 500px){
+/*navbar on small screens*/
+ .navigation{
+   padding: 5px;
+   height: 15vh;
+ }
+
+ .navigation label{
+   display: none;
+ }
+
+  /*cards on small screens*/
   .card{
   width: 200px;
 

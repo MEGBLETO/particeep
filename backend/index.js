@@ -58,7 +58,7 @@ app.get('/api/movies/:category' , async(req, res) =>{
 app.delete('/api/movies/:id' , async(req, res) =>{
 try {
   const movieId = req.params.id;
-  
+  console.log(movieId)
   let movieArray = [];
   movies$.then((moviess) =>{
     for(var i = moviess.length -1; i>=0; i--){

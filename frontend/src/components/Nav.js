@@ -17,10 +17,10 @@ const Nav = () => {
   }, []);
 
   return (
-    <div>
       <nav className="navigation">
         <h1>Movie Mania</h1>
         <div className="select">
+          <label id="navlabel" htmlFor="">Sort By Categoy:</label>
           <select name="movies" id="movie-select">
             <option value="">--Please choose a category in order to filter</option>
              
@@ -35,7 +35,6 @@ const Nav = () => {
           </select>
         </div>
       </nav>
-    </div>
   );
 };
 
