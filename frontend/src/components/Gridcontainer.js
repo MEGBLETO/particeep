@@ -56,9 +56,6 @@ const deleteCard = (e) =>{
    
       })}
 
-      <button id="fetch">Previous</button>  
-      <button id="fetch">Next</button> 
-     
     </div>
   )
 }
