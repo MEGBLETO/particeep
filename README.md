@@ -11,4 +11,7 @@ Pour le Backend
 cd backend and then  "npm run dev"
 
 
+//npm install express et nodemon en cas de crash
+
+
 
