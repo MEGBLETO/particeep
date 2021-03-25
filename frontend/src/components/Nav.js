@@ -35,13 +35,13 @@ const getValue = (e) =>{
         <div className="select">
           <label id="navlabel" htmlFor="">Sort By Categoy:</label>
          
-          <select name="movies" id="movie-select" onChange={(e) => getValue(e)}/*dispatch(clicked( e.target.value))}*/>
+          <select name="movies" id="movie-select" onChange={(e) => getValue(e)}>
             <option value="">--Please choose a category in order to filter</option>
              
             {categories.map((categorie, index) => {
-              //need to sort the array so that we only have one category of each type in the drop down list
+              //need to sort the data so that we only have one category of each type in the drop down list
               return (
-                <option index={index} value={categorie.category} onClick={() => dispatch(clicked())}>
+                <option index={index} value={categorie.category}>
                   {categorie.category}
                 </option>
               );
