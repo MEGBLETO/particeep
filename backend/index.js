@@ -37,7 +37,8 @@ try {
 
 app.get('/api/movies/:category' , async(req, res) =>{
   try {
-    const movieCategory= req.params.category;
+    const movieCategory= req.params.category
+    console.log(movieCategory)
     
     movies$.then((moviess) =>{
        const data = moviess.filter(movie => movie.category === movieCategory);

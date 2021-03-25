@@ -1,7 +1,7 @@
 //fichier pour combiner mes reducers en 1 points commun
 
 
-import movies from './Movies';
+import filter from './filter';
 
 import {combineReducers} from 'redux';
 
@@ -9,7 +9,7 @@ import {combineReducers} from 'redux';
 
 
 const allReducers = combineReducers({
- movies: movies
+ filter: filter
 
 })
 

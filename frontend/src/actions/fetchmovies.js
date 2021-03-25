@@ -1,16 +1,10 @@
-const  moviesState = {
-  loading: true,
-  movies: [],
-   error: ''
-  }
 
 
-
-
-export const movies = () =>{
+export const clicked = (val) =>{
 
   return{
-    type:'FETCHMOVIES' 
+    type:'CLICKED', 
+    value: val
   }
 
 }
